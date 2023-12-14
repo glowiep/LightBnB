@@ -6,9 +6,9 @@ const pool = new Pool({
   database: 'lightbnb'
 });
 
-module.exports = {
-  query: (text, params, callback) => {
-    return pool.query(text, params, callback)
-      .then(callback)
-  }
+const query = (text, params, callback) => {
+  return pool.query(text, params, callback)
+    .then(callback)
 }
+
+module.exports = { query }
