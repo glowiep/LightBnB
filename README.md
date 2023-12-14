@@ -9,9 +9,6 @@ Below is the visual representation of the data model displaying the relationship
 ## Project Structure
 ```
 .
-├── db
-│   ├── json
-│   └── database.js
 ├── public
 │   ├── javascript
 │   │   ├── components 
@@ -30,9 +27,17 @@ Below is the visual representation of the data model displaying the relationship
 │   │   ├── main.css
 │   │   └── main.css.map
 │   └── index.html
-├── routes
-│   ├── apiRoutes.js
-│   └── userRoutes.js
+├── server
+│   ├── database.js
+│   ├── db
+│   │   └── index.js
+│   ├── json
+│   │   ├── properties.json
+│   │   └── users.json
+│   ├── routes
+│   │   ├── apiRoutes.js
+│   │   └── userRoutes.js
+│   └── server.js
 ├── styles  
 │   ├── _forms.scss
 │   ├── _header.scss
@@ -42,11 +47,9 @@ Below is the visual representation of the data model displaying the relationship
 ├── package-lock.json
 ├── package.json
 ├── README.md
-└── server.js
 ```
-* `db` contains all the database interaction code.
-  * `json` is a directory that contains a bunch of dummy data in `.json` files.
-  * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+
+  
 * `public` contains all of the HTML, CSS, and client side JavaScript. 
   * `index.html` is the entry point to the application. It's the only html page because this is a single page application.
   * `javascript` contains all of the client side javascript files.
@@ -54,9 +57,13 @@ Below is the visual representation of the data model displaying the relationship
     * `network.js` manages all ajax requests to the server.
     * `views_manager.js` manages which components appear on screen.
     * `components` contains all of the individual html components. They are all created using jQuery.
-* `routes` contains the router files which are responsible for any HTTP requests to `/users/something` or `/api/something`. 
+* `server` contains all of the server side JavaScript and a directory containing `.json` files.
+  * `database.js` is responsible for all queries to the database
+  * `db` contains all the database interaction code.
+    * `json` is a directory that contains a bunch of dummy data in `.json` files.
+  * `routes` contains the router files which are responsible for any HTTP requests to `/users/something` or `/api/something`. 
+  * `server.js` is the entry point to the application. This connects the routes to the database.
 * `styles` contains all of the sass files. 
-* `server.js` is the entry point to the application. This connects the routes to the database.
 
 ## Dependencies
 
