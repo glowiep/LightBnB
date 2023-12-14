@@ -91,6 +91,7 @@ const getAllReservations = function(guest_id, limit = 10) {
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = (options, limit = 10) => {
+  // Initialize an empty array to hold parameters
   const queryParams = [];
 
   // Query that comes before the WHERE clause
@@ -108,7 +109,7 @@ const getAllProperties = (options, limit = 10) => {
     `;
   }
 
-  // Check if the city field is entered in the search
+  // Check if the city field is entered in the search, then check if the price range is specified
   if (!options.city) {
     if (options.minimum_price_per_night && !options.maximum_price_per_night) {
       queryParams.push(options.minimum_price_per_night * 100);
@@ -143,6 +144,7 @@ const getAllProperties = (options, limit = 10) => {
   // After the WHERE clause
   queryString += ` GROUP BY properties.id`;
 
+  // If rating parameter is specified
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
     queryString += `
