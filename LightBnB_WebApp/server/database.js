@@ -1,10 +1,5 @@
-const { Pool } = require("pg");
-const pool = new Pool({
-  user: 'vagrant',
-  password: '123',
-  host: 'localhost',
-  database: 'lightbnb'
-});
+// Require the database adapter file, restructured to not require node-postgres directly
+const db = require("./db")
 
 /// Users
 
