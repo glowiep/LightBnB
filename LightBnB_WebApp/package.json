@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch styles/main.scss:public/styles/main.css",
-    "local": "npx nodemon -L server",
+    "local": "npx nodemon -L server/server",
     "start": "node server/server"
   },
   "keywords": [],
