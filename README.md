@@ -72,3 +72,42 @@ Below is the visual representation of the data model displaying the relationship
 - express
 - nodemon
 - pg
+
+## Setup Instructions
+
+Clone this Repository locally.
+## Database Setup
+#### Starting PostgreSQL in WSL2
+
+```
+startpostgres
+```
+#### Starting PostgreSQL for Apple M1 owners
+```
+brew services start postgresql
+```
+### Connect to PostgreSQL
+```
+psql
+```
+### Create and connect to the database locally
+```
+CREATE DATABASE lightbnb;
+\c lightbnb
+```
+
+### Create and populate the database tables
+```
+\i migrations/01_schema.sql
+\i seeds/01_seeds.sql
+\i seeds/02_seeds.sql
+```
+
+## Connect to web application
+
+1. Navigate to the root LightBnB_WebApp and install dependencies
+```npm install```
+2. Run the application
+```npm run local```
+3. Open the web app via http://localhost:3000 on the browser
+
