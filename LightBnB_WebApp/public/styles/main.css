@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 9%;
   opacity: 1;
 }
 
@@ -24,6 +24,7 @@
   padding-bottom: 1em;
   background-color: rgb(249, 249, 249);
   box-shadow: 2 7px 7px -5px rgba(0, 0, 0, 0.21);
+  z-index: 0;
   cursor: pointer;
 }
 .property-listing__title {
@@ -38,9 +39,8 @@
   height: 100%;
   padding-top: 10px;
 }
-
-.macbook-top-bar {
-  z-index: 5;
+.property-listing .macbook-top-bar {
+  z-index: 0;
   height: auto;
   width: 500px;
   background-color: #474747;
@@ -51,26 +51,23 @@
   display: flex;
   box-shadow: 2 7px 7px -5px rgba(0, 0, 0, 0.21);
 }
-
-.top-bar-button {
+.property-listing .macbook-top-bar .top-bar-button {
   width: 1rem;
   height: 1rem;
   margin-left: 10px;
   background-color: #e46062;
   border-radius: 1000px;
   margin-left: 0.5rem;
+  position: relative;
 }
-
-.top-bar-button.red {
+.property-listing .macbook-top-bar .top-bar-button.red {
   border: 1px #f4f4f4;
   margin-left: 1rem;
 }
-
-.top-bar-button.white {
+.property-listing .macbook-top-bar .top-bar-button.white {
   background-color: #f4f4f4;
 }
-
-.top-bar-button.green {
+.property-listing .macbook-top-bar .top-bar-button.green {
   background-color: #64e981;
 }
 
@@ -147,6 +144,7 @@ button {
   background-color: rgba(227, 219, 219, 0.2);
   backdrop-filter: blur(10px);
   position: fixed;
+  z-index: 100000;
   left: -2%;
   width: 100%;
   top: 0%;
