@@ -2,6 +2,16 @@
 
 A simple multi-page Airbnb clone that uses a server-side JavaScript to display the information from queries to web pages via SQL queries.
 
+## Final Product
+### Property Listings Page
+![LightBnB Property Listings page](docs/LightBnB_Listings.png)
+
+### Search Page
+![LightBnB Search page](docs/LightBnB_Search.png)
+
+### User Sign Up page
+![LightBnB Sign Up page](docs/LightBnB_SignUp.png)
+
 ## Entity Relationship Diagram (ERD)
 Below is the visual representation of the data model displaying the relationships between entities in the LightBnB database. 
 ![Entity Relationship Diagram](docs/ERD-lightbnb.png)
@@ -110,4 +120,3 @@ CREATE DATABASE lightbnb;
 2. Run the application
 ```npm run local```
 3. Open the web app via http://localhost:3000 on the browser
-
