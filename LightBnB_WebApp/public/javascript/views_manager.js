@@ -40,4 +40,10 @@ $(() => {
     }
   }
   
+  // Scroll to top button function
+  $("#scroll-button").on("click", function(event) {
+    event.preventDefault;
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return $("#compose-tweet").show().find("#tweet-text").focus();
+  });
 });
