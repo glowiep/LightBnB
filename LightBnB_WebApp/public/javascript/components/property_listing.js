@@ -4,6 +4,11 @@ $(() => {
   function createListing(property, isReservation) {
     return `
     <article class="property-listing">
+      <div class="macbook-top-bar">
+        <div class="top-bar-button red"></div>
+        <div class="top-bar-button white"></div>
+        <div class="top-bar-button green w-inline-block"></div>
+      </div>  
         <section class="property-listing__preview-image">
           <img src="${property.thumbnail_photo_url}" alt="house">
         </section>

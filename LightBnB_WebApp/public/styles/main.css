@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 5%;
+  opacity: 1;
 }
 
 .property-listing {
@@ -19,7 +21,9 @@
   flex-direction: column;
   align-items: center;
   align-content: space-between;
-  padding: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(249, 249, 249);
+  box-shadow: 2 7px 7px -5px rgba(0, 0, 0, 0.21);
   cursor: pointer;
 }
 .property-listing__title {
@@ -32,7 +36,42 @@
 .property-listing__preview-image img {
   min-width: 100%;
   height: 100%;
-  padding: 0;
+  padding-top: 10px;
+}
+
+.macbook-top-bar {
+  z-index: 5;
+  height: auto;
+  width: 500px;
+  background-color: #474747;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  display: flex;
+  box-shadow: 2 7px 7px -5px rgba(0, 0, 0, 0.21);
+}
+
+.top-bar-button {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 10px;
+  background-color: #e46062;
+  border-radius: 1000px;
+  margin-left: 0.5rem;
+}
+
+.top-bar-button.red {
+  border: 1px #f4f4f4;
+  margin-left: 1rem;
+}
+
+.top-bar-button.white {
+  background-color: #f4f4f4;
+}
+
+.top-bar-button.green {
+  background-color: #64e981;
 }
 
 @media screen and (max-width: 400px) {
@@ -51,6 +90,7 @@
   flex-direction: column;
   align-items: stretch;
   margin: auto;
+  margin-top: 8%;
 }
 .search-property-form__field-wrapper,
 .login-form__field-wrapper,
@@ -104,8 +144,12 @@ button {
 
 .page-header {
   font-family: Segoe UI, Verdana, sans-serif;
-  background-color: #e4dff0;
-  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  background-color: rgba(227, 219, 219, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: -2%;
+  width: 100%;
+  top: 0%;
 }
 .page-header .home {
   font-size: 30px;
@@ -120,10 +164,12 @@ button {
 .page-header__user-links ul li {
   padding: 5px 5px;
   margin: 0 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .page-header__user-links ul :hover {
-  box-shadow: 0px 0px 0px 3px rgba(3, 102, 214, 0.3);
+  background-color: #ddd;
+  color: black;
 }
 
 .hidden {
